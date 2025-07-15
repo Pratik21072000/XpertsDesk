@@ -6,6 +6,7 @@ import { getLoggedUserData } from "./auth";
 // import { getUserDetails } from "./userDetails";
 // import { getUserDetails } from "./userDetails";
 import { getUserDetails } from "./userDetails";
+const config = require('../assets/config.json')
 
 function MsLogin({ afterLoggedInCallBack }) {
   const [loading, setLoading] = useState(false);
@@ -27,13 +28,13 @@ function MsLogin({ afterLoggedInCallBack }) {
         }
       });
       afterLoggedInCallBack(userDetails);
-      window.location.href = `${process.env.REACT_APP_URL}/my-tickets`;
+      window.location.href = `${config.REACT_APP_URL}/my-tickets`;
       setLoading(false);
     } else {
       window.location.href =
-        process.env.REACT_APP_LOGIN_GATEWAY_URL +
+        config.REACT_APP_LOGIN_GATEWAY_URL +
         `/login` +
-        `?redirectURL=${process.env.REACT_APP_REDIRECT_URL}`;
+        `?redirectURL=${config.REACT_APP_REDIRECT_URL}`;
     }
     setLoading(false);
   }

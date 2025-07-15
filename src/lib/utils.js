@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+const config = require('../assets/config.json')
 
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -12,7 +13,7 @@ export const api = {
       const token = sessionStorage.getItem(
         "8ee22acb-94b0-481d-b11b-f87168b880e3",
       );
-      const response = await fetch(url, {
+      const response = await fetch(`${config?.BASE_URL}${url}`, {
         headers: {
           ...(token && { Authorization: `Bearer ${token}` }),
         },
@@ -33,7 +34,7 @@ export const api = {
       const token = sessionStorage.getItem(
         "8ee22acb-94b0-481d-b11b-f87168b880e3",
       );
-      const response = await fetch(url, {
+      const response = await fetch(`${config?.BASE_URL}${url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +58,7 @@ export const api = {
       const token = sessionStorage.getItem(
         "8ee22acb-94b0-481d-b11b-f87168b880e3",
       );
-      const response = await fetch(url, {
+      const response = await fetch(`${config?.BASE_URL}${url}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

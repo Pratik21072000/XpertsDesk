@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-
+const config = require('../../src/assets/config.json')
 export const AuthContext = createContext(undefined);
 
 export const AuthProvider = ({ children }) => {
@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       localStorage.clear();
-      window.location.href = process.env.REACT_APP_LOGINGATEWAY;
+      window.location.href = config.REACT_APP_LOGINGATEWAY;
       // await fetch("/api/auth/logout", { method: "POST" });
     } catch (error) {
       console.error("Logout failed:", error);
