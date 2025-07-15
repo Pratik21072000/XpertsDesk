@@ -2,7 +2,7 @@
   "environment": "dev",
   "REDIRECT_URL": "https://hd-ui-dev.azurewebsites.net/login",
   "POSTREDIRECT_URL": "https://hd-ui-dev.azurewebsites.net",
-  "BASE_URL": "https://hd-api-dev.azurewebsites.net/",
+  "BASE_URL": "https://hd-api-dev-awefcnb3g0hnc7fq.centralindia-01.azurewebsites.net/",
   "SECRET": "1234567890abcdefghijklmnopqrstuvwxyz",
   "LOGIN_GATEWAY_URL": "https://login-ui-dev.azurewebsites.net"
 }
