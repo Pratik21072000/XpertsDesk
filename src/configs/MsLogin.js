@@ -6,6 +6,7 @@ import { getLoggedUserData } from "./auth";
 // import { getUserDetails } from "./userDetails";
 // import { getUserDetails } from "./userDetails";
 import { getUserDetails } from "./userDetails";
+import brandLogo from "../assets/images/IX2.png";
 const config = require('../assets/config.json')
 
 function MsLogin({ afterLoggedInCallBack }) {
@@ -55,9 +56,9 @@ function MsLogin({ afterLoggedInCallBack }) {
           <div className="Signout-div">
             <div className="w-70">
               <img
-                src="/logo.png"
+                src={brandLogo}
                 style={{ width: "70px", objectFit: "cover" }}
-                alt="logo"
+                alt="brandlogo"
               />
               <h1 className="signout-header">Redirecting...</h1>
             </div>
